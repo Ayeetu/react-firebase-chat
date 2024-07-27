@@ -6,8 +6,16 @@
     "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
 }
 
+:root {
+  --text-color: #fff;
+  --accent-color: rgba(17, 25, 40, 0.75);
+  --primary-color: rgba(17, 25, 40, 0.9);
+  --secondary-color: rgba(17, 25, 40, 0.5);
+  --bg-color: rgba(17, 25, 40, 0.75);
+}
+
 body {
-  background-image: url("../public/bg.jpg");
+  background-image: url("/bg.jpg");
   background-size: cover;
   height: 100svh;
   display: flex;
@@ -17,6 +25,7 @@ body {
 }
 
 .container {
+  overflow: hidden;
   display: grid;
   text-align: center;
   grid-template-columns: 1fr 2fr 1fr;
@@ -30,4 +39,3 @@ body {
   font-weight: bold;
   font-size: 1.2rem;
 }
-

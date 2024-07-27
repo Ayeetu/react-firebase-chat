@@ -1,5 +1,6 @@
 .chatList {
   display: flex;
+  flex-direction: column;
   padding: 20px;
 }
 
@@ -8,39 +9,91 @@
   width: 100%;
   justify-content: space-between;
   gap: 15px;
+  margin-bottom: 20px;
+
+  .add {
+    background-color: rgba(17, 25, 40, 0.75);
+    width: 36px;
+    height: 36px;
+    padding: 10px;
+    border-radius: 10px;
+    cursor: pointer;
+  }
+  .searchBar {
+    padding-left: 10px;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    background-color: rgba(17, 25, 40, 0.75);
+    border-radius: 5px;
+    height: 35px;
+    color: #fff;
+
+    img {
+      width: 25px;
+      height: 25px;
+      cursor: pointer;
+    }
+
+    input {
+      background: transparent;
+      border: none;
+      outline: none;
+      padding: 0 10px;
+      color: #fff;
+      font-size: 1.1rem;
+    }
+  }
 }
 
-.search .add {
-  background-color: rgba(17, 25, 40, 0.75);
-  width: 36px;
-  height: 36px;
-  padding: 10px;
-  border-radius: 10px;
-  cursor: pointer;
-}
+.listChats {
+  overflow-y: scroll;
+  padding-right: 10px;
+  height: calc(100vh - 300px);
+  scrollbar-width: thin;
+  scrollbar-color: rgba(255, 255, 255, 0.2) rgba(17, 25, 40, 0.75);
+  .item {
+    margin-top: 10px;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    font-size: 1rem;
+    cursor: pointer;
+    background: rgba(17, 25, 40, 0.75);
+    border-radius: 10px;
+    padding: 10px;
+    transition: background 0.3s ease-in-out;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    border: 1px solid rgba(255, 255, 255, 0.2);
 
-.searchBar {
-  padding-left: 10px;
-  display: flex;
-  align-items: center;
-  gap: 5px;
-  background-color: rgba(17, 25, 40, 0.75);
-  border-radius: 5px;
-  height: 35px;
-  color: #fff;
-}
+    &:hover {
+      background: rgba(17, 25, 40, 0.9);
+    }
 
-.searchBar img {
-  width: 25px;
-  height: 25px;
-  cursor: pointer;
-}
+    img {
+      width: 60px;
+      height: 60px;
+      border-radius: 50%;
+      object-fit: cover;
+    }
 
-.searchBar input {
-  background: transparent;
-  border: none;
-  outline: none;
-  padding: 0 10px;
-  color: #fff;
-  font-size: 1.1rem;
+    .texts {
+      display: flex;
+      flex-direction: column;
+      gap: 5px;
+      text-align: left;
+
+      span {
+        font-size: 1.2rem;
+        color: #fff;
+        font-weight: 500;
+      }
+
+      p {
+        font-size: 1rem;
+        color: #fff;
+        font-weight: 300;
+      }
+    }
+  }
 }
