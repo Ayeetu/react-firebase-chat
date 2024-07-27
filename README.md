@@ -1,3 +1,16 @@
-# Lama Dev Chat App Starter template
+## React chat app
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+chat app using react and firebase
+
+## Getting Started
+
+### Prerequisites
+
+- Node.js
+- npm
+
+### Installation
+
+1. Clone the repository
+2. Install dependencies using npm
+3. Run the application
